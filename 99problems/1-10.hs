@@ -12,3 +12,7 @@ length' :: [a] -> Int
 length' [ ] = 0
 length' [x] = 1
 length' (x:xs) = 1 + length' xs
+
+reverse' :: [a] -> [a]
+reverse' [] = []
+reverse' (x:xs) = (reverse xs) ++ [x]  
