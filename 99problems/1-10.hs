@@ -16,3 +16,8 @@ length' (x:xs) = 1 + length' xs
 reverse' :: [a] -> [a]
 reverse' [] = []
 reverse' (x:xs) = (reverse xs) ++ [x]  
+
+isPalindrome :: (Eq a) => [a] -> Bool
+isPalindrome [] = True
+isPalindrome [x] = True
+isPalindrome (x:xs) = (x == (last xs)) && (isPalindrome xs) 
