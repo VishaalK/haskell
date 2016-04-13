@@ -20,4 +20,4 @@ reverse' (x:xs) = (reverse xs) ++ [x]
 isPalindrome :: (Eq a) => [a] -> Bool
 isPalindrome [] = True
 isPalindrome [x] = True
-isPalindrome (x:xs) = (x == (last xs)) && (isPalindrome xs) 
+isPalindrome (x:xs) = (x == (last xs)) && (isPalindrome (init xs)) 
